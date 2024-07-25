@@ -99,7 +99,7 @@
   
   
 
-
+// 65 - masala
 // function maxSumSubmatrix(matrix) {
 //     let maxRow = matrix[0];
 //     let maxSum = matrix[0].reduce((a, b) => a + b, 0);
@@ -131,3 +131,59 @@
 
 
   
+// 67 - masala
+function twoSumPairs(nums, target) {
+    let arr = []
+    for (var i = 0; i < nums.length; i++) {
+        for (var j = i + 1; j < nums.length; j++) {
+          if (nums[i] + nums[j] === target) {
+            arr.push(nums[i], nums[j]);
+          }
+        }
+      }
+     console.log(arr);
+}
+// twoSumPairs([2, 7, 11, 15], 9); // Output: [[2, 7]]
+// twoSumPairs([3, 2, 4], 6); // Output: [[2, 4]]
+
+
+
+// 68 - masala
+function charFrequency(s) {
+       let obj = {};
+    for (let item of s) {
+        if (item !== ' ') { 
+            if (obj[item]) {
+                obj[item]++;
+            } else {
+                obj[item] = 1;
+            }
+        }
+    }
+    console.log(obj);
+}
+// charFrequency("aabbcc"); // Output: { a: 2, b: 2, c: 2 }
+// charFrequency("hello"); // Output: { h: 1, e: 1, l: 2, o: 1 }
+
+
+
+
+// 69 - masala
+// function deepestValue(obj) {
+//   console.log(obj);
+// }
+
+// const obj = {
+//   a: 1,
+//   b: {
+//       c: 2,
+//       d: {
+//           e: 3,
+//           f: {
+//               g: 4
+//           }
+//       }
+//   }
+// };
+// console.log(deepestValue(obj)); // Output: 4
+
