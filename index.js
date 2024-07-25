@@ -26,6 +26,38 @@
 
 
 
+
+// 61 - masala
+// function mostFrequentChar(str) {
+//     let frequency = {};
+//     for (let item of str) {
+//         if (frequency[item]) {
+//             frequency[item]++;
+//         } else {
+//             frequency[item] = 1;
+//         }
+//     }
+//     let maxCount = 0;
+//     let maxitem = '';
+    
+//     for (let item in frequency) {
+//         if (frequency[item] > maxCount) {
+//             maxCount = frequency[item];
+//             maxitem = item;
+//         }
+//     }
+
+//     return maxitem;
+// }
+
+// // Test cases
+// console.log(mostFrequentChar("aabbbcccc")); // Output: "c"
+// console.log(mostFrequentChar("abcdabcdabcd")); // Output: "a"
+
+
+
+
+
 // 62 - masala
 // function firstMissingPositive(nums) {
 //     let arr = []
@@ -56,7 +88,6 @@
 // 64 - masala
 // function longestCommonPrefix(arr) {
 //     const charList = [];
-    
 //     const [shortestWord, ...wordList] =
 //       [...arr].sort((a, b) => a.length - b.length);
     
@@ -132,36 +163,36 @@
 
   
 // 67 - masala
-function twoSumPairs(nums, target) {
-    let arr = []
-    for (var i = 0; i < nums.length; i++) {
-        for (var j = i + 1; j < nums.length; j++) {
-          if (nums[i] + nums[j] === target) {
-            arr.push(nums[i], nums[j]);
-          }
-        }
-      }
-     console.log(arr);
-}
+// function twoSumPairs(nums, target) {
+//     let arr = []
+//     for (var i = 0; i < nums.length; i++) {
+//         for (var j = i + 1; j < nums.length; j++) {
+//           if (nums[i] + nums[j] === target) {
+//             arr.push(nums[i], nums[j]);
+//           }
+//         }
+//       }
+//      console.log(arr);
+// }
 // twoSumPairs([2, 7, 11, 15], 9); // Output: [[2, 7]]
 // twoSumPairs([3, 2, 4], 6); // Output: [[2, 4]]
 
 
 
 // 68 - masala
-function charFrequency(s) {
-       let obj = {};
-    for (let item of s) {
-        if (item !== ' ') { 
-            if (obj[item]) {
-                obj[item]++;
-            } else {
-                obj[item] = 1;
-            }
-        }
-    }
-    console.log(obj);
-}
+// function charFrequency(s) {
+//        let obj = {};
+//     for (let item of s) {
+//         if (item !== ' ') { 
+//             if (obj[item]) {
+//                 obj[item]++;
+//             } else {
+//                 obj[item] = 1;
+//             }
+//         }
+//     }
+//     console.log(obj);
+// }
 // charFrequency("aabbcc"); // Output: { a: 2, b: 2, c: 2 }
 // charFrequency("hello"); // Output: { h: 1, e: 1, l: 2, o: 1 }
 
@@ -170,9 +201,22 @@ function charFrequency(s) {
 
 // 69 - masala
 // function deepestValue(obj) {
-//   console.log(obj);
+//     let result = null
+//     let total = 0
+//     let arr = [{value: obj, step: 1}]
+//     for(let i = 0; i < arr.length; i++){
+//         let {value, step} = arr[i]
+//         for(let key in value){
+//             if (typeof value[key] === "object") {
+//                 arr.push({value: value[key], step: step + 1})
+//             }else if(step > total){
+//                 total = step
+//                 result = value[key]
+//             }
+//         }
+//     }
+//     console.log(result);
 // }
-
 // const obj = {
 //   a: 1,
 //   b: {
@@ -185,5 +229,5 @@ function charFrequency(s) {
 //       }
 //   }
 // };
-// console.log(deepestValue(obj)); // Output: 4
+// deepestValue(obj); // Output: 4
 
